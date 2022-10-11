@@ -17,12 +17,27 @@ fibonacci(2); // 1
 fibonacci(3); // 2
 fibonacci(4); // 3
 fibonacci(10); // 55
+
+edge case checker:
+if (n === 0) {
+    debugger
+    return 0
+  } else
 ***********************************************************************/
 
-function fibonacci(n) {
-  // Your code here
+function fibonacci(n, starter = [0, 1]) {
+  debugger
+  if (starter.length > n) {
+    debugger
+    return starter[starter.length - 1]
+  }
+  debugger
+  let num1 = starter[starter.length - 2]
+  let num2 = starter[starter.length - 1]
+  debugger
+  starter.push(num1 + num2)
+  return fibonacci(n, starter)
 }
-  
+fibonacci(10); // 55
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
 module.exports = fibonacci;
-  
