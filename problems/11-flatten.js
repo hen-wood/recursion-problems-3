@@ -32,7 +32,7 @@ function flatten(arr) {
     return arr
   }
   debugger
-  let element = arr.pop()
+  let element = arr.shift()
   debugger
   arr = arr.concat(element)
   debugger
@@ -40,6 +40,6 @@ function flatten(arr) {
 }
 // console.log(flatten([])); // []
 // console.log(flatten([1, 2])); // [1, 2]
-// console.log(flatten([1, [2, [3]]])); // [1, 2, 3]
+console.log(flatten([1, [2], [4, 5, [6, 7]], [2, [3]]])); // [1, 2, 3]
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
 module.exports = flatten;
