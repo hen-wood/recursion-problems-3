@@ -9,13 +9,37 @@ Examples:
 
 flatten([]); // []
 flatten([1, 2]); // [1, 2]
-flatten([1, [2, [3]]]); // [1, 2, 3]
+flatten(); // [1, 2, 3]
 ***********************************************************************/
 
+
+
+// arr === [1, [2, [3]]]
+
+// element === [2,[3]]
+
+// arr === [1, 2, [3]]
+
+// element = [3]
+
+// arr === [1, 2, 3]
 function flatten(arr) {
-  // Your code here
+  debugger
+  let areAnyArraysLeft = arr.some(el => typeof el === 'object')
+  debugger
+  if (!areAnyArraysLeft || arr.length === 0) {
+    debugger
+    return arr
+  }
+  debugger
+  let element = arr.pop()
+  debugger
+  arr = arr.concat(element)
+  debugger
+  return flatten(arr)
 }
-  
+// console.log(flatten([])); // []
+// console.log(flatten([1, 2])); // [1, 2]
+// console.log(flatten([1, [2, [3]]])); // [1, 2, 3]
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
 module.exports = flatten;
-  
