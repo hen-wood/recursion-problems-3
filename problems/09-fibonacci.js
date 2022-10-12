@@ -29,7 +29,7 @@ function fibonacci(n, starter = [0, 1]) {
   debugger
   if (starter.length > n) {
     debugger
-    return starter[starter.length - 1]
+    return starter.pop()
   }
   debugger
   let num1 = starter[starter.length - 2]
